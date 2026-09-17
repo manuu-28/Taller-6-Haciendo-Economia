@@ -16,11 +16,14 @@ El repositorio contiene el análisis de datos experimentales de un juego de bien
 El análisis busca responder dos preguntas:
 
 1. ¿Hubo diferencias en las contribuciones promedio entre los dos juegos?
+
 2. ¿Esas diferencias pueden atribuirse al cambio en las reglas del juego, o son atribuibles al azar?
 
 Para esto se calculan estadísticas descriptivas (media, varianza, desviación estándar, mínimo, máximo, rango) por período y por juego, se construyen gráficos de línea y de columnas de la contribución promedio a lo largo del tiempo, y se realizan pruebas t para comparar las medias del Período 1 y del Período 10 entre ambos juegos.
 
 ## Estructura del repositorio
 RawData/ -> Datos originales del juego (sin editar manualmente)
+
 DoFiles/ -> Do-files de Stata con todo el análisis reproducible
+
 Resultados/ -> Tablas y gráficos generados por los do-files
