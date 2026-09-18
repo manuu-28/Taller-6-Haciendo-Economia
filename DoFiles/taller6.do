@@ -130,3 +130,21 @@ ttest sin_p1 == con_p1
 * Período 10 
 * Este resultado responde la pregunta 2.3.3.
 ttest sin_p10 == con_p10
+
+
+
+* Parte 2.1
+use "RawData\Datos_Juego.dta", clear
+preserve
+collapse (mean) contribucion_eur, by(juego ronda)
+
+twoway ///
+ (line contribucion_eur ronda if juego==1) ///
+ (line contribucion_eur ronda if juego==2), ///
+ legend(order(1 "Con castigo" 2 "Sin castigo")) ///
+ xlabel(1(1)10) ///
+ ytitle("Contribución promedio (€)") xtitle("Período") ///
+ title("Contribución promedio por período — Tu juego de clase")
+
+graph export "Resultados\linea_periodo_datos_juego.png", replace width(1200)
+restore
